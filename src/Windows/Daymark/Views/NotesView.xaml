@@ -1,0 +1,62 @@
+<UserControl x:Class="Daymark.Views.NotesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="38,34,38,44">
+        <StackPanel MaxWidth="1180" HorizontalAlignment="Left" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ScrollViewer}}">
+            <TextBlock Text="REFLECT" Style="{StaticResource Eyebrow}"/>
+            <TextBlock Text="Daily notes" Style="{StaticResource H1}" Margin="0,8,0,0"/>
+            <TextBlock Text="A quiet space for thoughts, plans and small wins." Style="{StaticResource Muted}" Margin="0,7,0,0"/>
+
+            <Grid Margin="0,26,0,0">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="1.7*"/><ColumnDefinition Width="26"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+
+                <Border Style="{StaticResource Card}" Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+                        <Border BorderBrush="{DynamicResource Border}" BorderThickness="0,0,0,1" Padding="20,16">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Button Content="‹" Style="{StaticResource SecondaryButton}" Width="34" Padding="0,4" Click="PrevDay_Click"/>
+                                    <DatePicker x:Name="NoteDate" Width="160" Margin="10,0" SelectedDateChanged="NoteDate_Changed"/>
+                                    <Button Content="›" Style="{StaticResource SecondaryButton}" Width="34" Padding="0,4" Click="NextDay_Click"/>
+                                    <Button Content="Today" Style="{StaticResource QuietButton}" Margin="8,0,0,0" Click="Today_Click"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                    <TextBlock x:Name="CharCount" Text="0 characters" Style="{StaticResource Muted}" Margin="0,0,12,0"/>
+                                    <ToggleButton x:Name="PinButton" Content="☆ Pin" Style="{StaticResource ToggleChip}" Click="Pin_Click" ToolTip="Pin this day's note"/>
+                                    <TextBlock x:Name="SaveStatus" Text="Saved" Style="{StaticResource Muted}" Margin="12,0,0,0"
+                                           VerticalAlignment="Center" Foreground="{DynamicResource Success}"/>
+                                    </StackPanel>
+                            </Grid>
+                        </Border>
+                        <TextBox x:Name="NoteBox" Grid.Row="1" MinHeight="420" Background="Transparent" BorderThickness="0"
+                                 Foreground="{DynamicResource Text}" FontSize="14" Padding="22,20"
+                                 AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                 CaretBrush="{DynamicResource Primary}" TextChanged="NoteBox_Changed"
+                                 AutomationProperties.Name="Daily note content"/>
+                    </Grid>
+                </Border>
+
+                <StackPanel Grid.Column="2">
+                    <Border Style="{StaticResource Card}" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="NOTE LIBRARY" Style="{StaticResource Eyebrow}"/>
+                            <TextBlock Text="By date" Style="{StaticResource H3}" Margin="0,8,0,12"/>
+                            <TextBox x:Name="NoteSearch" Style="{StaticResource Input}" Height="36" Tag="Search note text..."
+                                     TextChanged="NoteSearch_Changed" AutomationProperties.Name="Search notes"/>
+                            <StackPanel x:Name="NoteDates" Margin="0,12,0,0"/>
+                            <TextBlock x:Name="NoNotes" Text="No saved notes yet. Start typing to create today's note." Style="{StaticResource Muted}" Margin="2,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource Card}" Padding="18" Margin="0,16,0,0">
+                        <StackPanel>
+                            <TextBlock Text="AUTOSAVE &amp; PINNING" Style="{StaticResource Eyebrow}"/>
+                            <TextBlock Style="{StaticResource Body}" Margin="0,10,0,0"
+                                       Text="Notes save automatically as you type and flush when you leave the screen. Pin important days to keep them at the top of the library."/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

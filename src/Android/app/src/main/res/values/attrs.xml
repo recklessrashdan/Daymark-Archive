@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="day_bg" format="reference|color"/>
+    <attr name="day_surface" format="reference|color"/>
+    <attr name="day_alt" format="reference|color"/>
+    <attr name="day_text" format="reference|color"/>
+    <attr name="day_muted" format="reference|color"/>
+    <attr name="day_border" format="reference|color"/>
+    <attr name="day_primary" format="reference|color"/>
+    <attr name="day_primary_dark" format="reference|color"/>
+    <attr name="day_primary_soft" format="reference|color"/>
+    <attr name="day_amber" format="reference|color"/>
+</resources>

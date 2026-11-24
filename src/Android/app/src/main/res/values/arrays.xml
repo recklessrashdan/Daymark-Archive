@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priorities">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="task_sorts">
+        <item>Smart order</item>
+        <item>Due date</item>
+        <item>Priority</item>
+        <item>Recently added</item>
+        <item>Title A–Z</item>
+    </string-array>
+</resources>

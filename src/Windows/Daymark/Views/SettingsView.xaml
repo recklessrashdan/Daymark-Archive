@@ -1,0 +1,55 @@
+<UserControl x:Class="Daymark.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="38,34,38,44">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ScrollViewer}}">
+            <TextBlock Text="PREFERENCES" Style="{StaticResource Eyebrow}"/>
+            <TextBlock Text="Settings" Style="{StaticResource H1}" Margin="0,8,0,0"/>
+            <TextBlock Text="Make Daymark feel like yours." Style="{StaticResource Muted}" Margin="0,7,0,0"/>
+
+            <Border Style="{StaticResource Card}" Margin="0,28,0,0">
+                <StackPanel>
+                    <TextBlock Text="Appearance" Style="{StaticResource H2}"/>
+                    <TextBlock Text="Choose how Daymark looks. Changes apply immediately." Style="{StaticResource Muted}" Margin="0,7,0,18"/>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="LightTheme" Content="Light" GroupName="Theme" Margin="0,0,10,0" Checked="Theme_Checked" Tag="light"/>
+                        <RadioButton x:Name="DarkTheme" Content="Dark" GroupName="Theme" Margin="0,0,10,0" Checked="Theme_Checked" Tag="dark"/>
+                        <RadioButton x:Name="SystemTheme" Content="System" GroupName="Theme" Checked="Theme_Checked" Tag="system"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource Card}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Data management" Style="{StaticResource H2}"/>
+                    <TextBlock Text="All data is stored locally on this device. Nothing is uploaded." Style="{StaticResource Muted}" Margin="0,7,0,16"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Local database" Style="{StaticResource H3}"/>
+                            <TextBlock x:Name="DbPath" Style="{StaticResource Muted}" Margin="0,5,0,0" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="StorageInfo" Style="{StaticResource Muted}" Margin="0,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Margin="16,0,0,0">
+                            <Button Content="Create backup copy" Style="{StaticResource SecondaryButton}" Click="Backup_Click" Margin="0,0,0,8"/>
+                            <Button Content="Clear all data" Style="{StaticResource SecondaryButton}" Click="Clear_Click" Foreground="{DynamicResource Danger}"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource Card}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="About Daymark" Style="{StaticResource H2}"/>
+                    <StackPanel Margin="0,16,0,0">
+                        <Grid Margin="0,0,0,10"><TextBlock Text="Version" Style="{StaticResource Muted}" Width="140"/><TextBlock Text="2.1.0 (offline edition)" Style="{StaticResource Body}"/></Grid>
+                        <Grid Margin="0,0,0,10"><TextBlock Text="Publisher" Style="{StaticResource Muted}" Width="140"/><TextBlock Text="Recklessplyer" Style="{StaticResource Body}"/></Grid>
+                        <Grid Margin="0,0,0,10"><TextBlock Text="Tagline" Style="{StaticResource Muted}" Width="140"/><TextBlock Text="Your Daily Life, Organised." Style="{StaticResource Body}"/></Grid>
+                        <Grid Margin="0,0,0,10"><TextBlock Text="Connectivity" Style="{StaticResource Muted}" Width="140"/><TextBlock Text="None required — fully offline" Style="{StaticResource Body}"/></Grid>
+                        <Grid><TextBlock Text="Data schema" Style="{StaticResource Muted}" Width="140"/><TextBlock x:Name="SchemaInfo" Style="{StaticResource Body}"/></Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

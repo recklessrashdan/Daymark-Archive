@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Daymark</string>
+    <string name="category_prompt">Filter by category</string>
+</resources>

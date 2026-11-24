@@ -1,5 +1,67 @@
 # Daymark release notes
 
+## Daymark v2.1.0 — Major Update
+
+**Your Daily Life, Organised.**
+
+Status: **Stable release**
+
+Daymark v2.1.0 improves reliability, note handling and Windows distribution while keeping the private, local-first design of earlier releases.
+
+### What's new in 2.1.0
+
+- **Windows installer** — per-user Inno Setup installer with a selectable directory, Start Menu shortcut, optional desktop shortcut, Installed Apps registration and standard uninstaller. A stable AppId supports future upgrades.
+- **Windows portable edition** — extract-and-run ZIP built from the same self-contained publish output. Both Windows editions share `%LOCALAPPDATA%\Daymark\daymark.db`.
+- **Safer Windows migration** — a verified backup is required only when a Daymark schema exists; migration-safety failures show the specific reason; backup verification no longer holds a pooled file handle; backup-directory failures are wrapped safely.
+- **Note editing fix** — pending note text is flushed to the previously displayed date before switching dates.
+- **Progress ring fix** — a complete circle is rendered at 100%.
+- **Android fixes** — pinned notes survive edit/autosave, migration-failure messaging is more precise, and clear-all cancels stale undo state.
+- Version metadata is now 2.1.0 (versionCode 3) on Android and 2.1.0 on Windows. SQLite schema remains version 2.
+
+### Downloads
+
+| Platform | File |
+|---|---|
+| Windows installer | `Daymark-Setup-v2.1.0.exe` |
+| Windows portable | `Daymark-Portable-v2.1.0.zip` |
+| Android | `Daymark-Android-v2.1.0.apk` |
+
+All three files are attached to the [v2.1.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v2.1.0), together with `SHA256SUMS.txt`.
+
+### Checksums (SHA-256)
+
+| File | SHA-256 |
+|---|---|
+| `Daymark-Setup-v2.1.0.exe` | `51EF3A1F0CA14AE7A761A93EC43938B6410EAC9A203EB43D5E80D92EE9288127` |
+| `Daymark-Portable-v2.1.0.zip` | `E02FBD0748974EC2ACCCF20EEF4C60510336FF823D3D88F72F4A591D98A96BB3` |
+| `Daymark-Android-v2.1.0.apk` | `D0AE47C6075C4DD4F8461DA837917DD26A6CFFB0878D76AF5E19CAB6307754D6` |
+
+### Verification status
+
+| Check | Status |
+|---|---|
+| Windows build and self-contained publish | PASS |
+| Inno Setup compile and portable ZIP build | PASS |
+| Windows installer file/shortcut/registration/uninstall checks | PASS |
+| Windows data-safety regression harness | PASS — 16/16 |
+| Windows application launch from installed/portable builds | **NOT TESTED** |
+| Android release build, signature, certificate identity, alignment and metadata | PASS |
+| Android zero-permission manifest and schema version 2 | PASS |
+| Android device/emulator runtime | **NOT TESTED** |
+| Windows code signing | **NOT APPLIED** — unsigned; SmartScreen may warn |
+
+### Privacy
+
+Daymark remains offline by design: no account, cloud sync, telemetry, analytics, tracking, ads or Internet permission on Android. Tasks and notes are stored locally.
+
+### Known limitations
+
+- Windows app-launch scenarios and Android device/emulator runtime scenarios were not tested in the build environment.
+- Windows executables are unsigned, so a SmartScreen warning may appear.
+- Data is local to each device; there is no synchronisation between Windows and Android installs.
+
+---
+
 ## Daymark v2.0.0 — Major Update
 
 **Your Daily Life, Organised.**

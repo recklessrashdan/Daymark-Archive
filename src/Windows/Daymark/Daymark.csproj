@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Assets\daymark.ico</ApplicationIcon>
+    <AssemblyName>Daymark</AssemblyName>
+    <RootNamespace>Daymark</RootNamespace>
+    <Version>2.1.0</Version>
+    <Company>Recklessplyer</Company>
+    <Product>Daymark</Product>
+    <Authors>Recklessplyer</Authors>
+    <Description>Your Daily Life, Organised.</Description>
+    <Copyright>None</Copyright>
+    <PublishReadyToRun>false</PublishReadyToRun>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\daymark.png" />
+    <Resource Include="Assets\daymark.ico" />
+  </ItemGroup>
+
+</Project>

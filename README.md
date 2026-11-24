@@ -8,9 +8,9 @@ A calm, focused space for your tasks, plans and thoughts — beautifully simple,
 
 <br>
 
-[Download for Windows](https://github.com/recklessrashdan/Daymark/releases/download/v2.0.0/Daymark-Windows-v2.0.0.exe) &nbsp;·&nbsp; [Download for Android](https://github.com/recklessrashdan/Daymark/releases/download/v2.0.0/Daymark-Android-v2.0.0.apk)
+[Download for Windows](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Setup-v2.1.0.exe) &nbsp;·&nbsp; [Windows Portable](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Portable-v2.1.0.zip) &nbsp;·&nbsp; [Download for Android](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Android-v2.1.0.apk)
 
-<sub>Version 2.0.0 &nbsp;·&nbsp; Windows & Android &nbsp;·&nbsp; Offline edition</sub>
+<sub>Version 2.1.0 &nbsp;·&nbsp; Windows & Android &nbsp;·&nbsp; Offline edition</sub>
 
 </div>
 
@@ -26,51 +26,60 @@ A calm, focused space for your tasks, plans and thoughts — beautifully simple,
 
 ## Download Daymark
 
-Choose the build for your device. Version 2.0.0 is the current stable release. All Daymark downloads are available from the [GitHub Releases page](https://github.com/recklessrashdan/Daymark/releases).
+Version 2.1.0 is the current stable release. All downloads are available from the [GitHub Releases page](https://github.com/recklessrashdan/Daymark/releases).
 
-### Windows
+### Windows installer
 
 | | |
 |---|---|
-| **File** | [`Daymark-Windows-v2.0.0.exe`](https://github.com/recklessrashdan/Daymark/releases/download/v2.0.0/Daymark-Windows-v2.0.0.exe) |
+| **File** | [`Daymark-Setup-v2.1.0.exe`](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Setup-v2.1.0.exe) |
 | **Platform** | Windows 10 / 11 (x64) |
-| **Setup** | None — self-contained single-file executable |
-| **SHA-256** | `919C6E246E5A4019463EF84C24AA3183008F02807476EB0745B7C6F172B45A6B` |
+| **Setup** | Per-user installer; no administrator rights required |
+| **SHA-256** | `51EF3A1F0CA14AE7A761A93EC43938B6410EAC9A203EB43D5E80D92EE9288127` |
 
-Download the executable and double-click it to start Daymark. No installer, .NET runtime installation or configuration is required.
+Run the installer and choose an install directory if desired. A Start Menu shortcut is created; the desktop shortcut is optional. Daymark is registered in Installed Apps with a standard uninstaller. Uninstalling removes program files, shortcuts and registration, but intentionally leaves your database and backups in place.
 
-> The Windows executable is **unsigned**, so Windows SmartScreen may show a warning the first time you run it. Verify the download with `SHA256SUMS.txt` before continuing.
+### Windows portable
+
+| | |
+|---|---|
+| **File** | [`Daymark-Portable-v2.1.0.zip`](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Portable-v2.1.0.zip) |
+| **Platform** | Windows 10 / 11 (x64) |
+| **Setup** | Extract and run `Daymark.exe` |
+| **SHA-256** | `E02FBD0748974EC2ACCCF20EEF4C60510336FF823D3D88F72F4A591D98A96BB3` |
+
+The portable edition uses the same local data location as the installed edition on the same Windows account: `%LOCALAPPDATA%\Daymark\daymark.db`, with backups in `%LOCALAPPDATA%\Daymark\backups\`. It does not create a database beside the executable.
 
 ### Android
 
 | | |
 |---|---|
-| **File** | [`Daymark-Android-v2.0.0.apk`](https://github.com/recklessrashdan/Daymark/releases/download/v2.0.0/Daymark-Android-v2.0.0.apk) |
+| **File** | [`Daymark-Android-v2.1.0.apk`](https://github.com/recklessrashdan/Daymark/releases/download/v2.1.0/Daymark-Android-v2.1.0.apk) |
 | **Platform** | Android 7.0 (API 24) or newer |
 | **Package** | `com.daymark.app` |
-| **Version** | 2.0.0 (version code 2) |
+| **Version** | 2.1.0 (version code 3) |
 | **Setup** | Install the signed APK directly |
-| **SHA-256** | `5EF2BF6DC6F9E1A64F3C032E6E189F9761A8DABF2183B2C6F54C5C80678B2BA5` |
+| **SHA-256** | `D0AE47C6075C4DD4F8461DA837917DD26A6CFFB0878D76AF5E19CAB6307754D6` |
 
-Download the APK to your device, open it, allow installation from that source if Android asks, and tap **Install**.
+The APK is signed with the original Daymark release certificate, so it updates the same app identity used by V1 and V2. It requests **zero permissions**, including no Internet permission.
 
-The APK is signed with the original Daymark release certificate, so it updates the same app identity used by V1. It requests **zero permissions**, including no Internet permission.
+### Previous releases
 
-### Previous release
+V1.0.0 and V2.0.0 remain available and unchanged:
 
-V1.0.0 remains available and unchanged in the [V1.0.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v1.0.0).
+- [V2.0.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v2.0.0)
+- [V1.0.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v1.0.0)
 
 ---
 
-## What's new in V2
+## What's new in V2.1.0
 
-- A refreshed Daymark identity with Midnight Navy, Porcelain, Electric Teal and Warm Amber, including a new horizon-mark logo and launcher icons.
-- A redesigned Today dashboard with daily overview, real progress, priority focus, deadlines, overdue count, note access and quick add.
-- A stronger task library with categories, pinning, priority, due dates, search, filters, sorting, completed organization and undo delete.
-- A polished monthly calendar on both platforms with day indicators, date selection, selected-day task lists and create-for-day. Windows also includes a functional week view.
-- Daily notes with lossless autosave, previous-day library, note search and pinning.
-- Light, Dark and System themes that persist across restarts.
-- Verified pre-upgrade backups and a safe, additive V1-to-V2 migration.
+- Windows installer and portable Windows edition built from the same self-contained `win-x64` publish output.
+- Safer Windows fresh-install and migration behavior: a verified pre-upgrade backup is required only when an existing Daymark schema is present, and migration-safety failures show a specific reason.
+- Fixed Windows note text loss when changing the displayed note date.
+- Fixed the Windows progress ring at 100%.
+- Fixed Android pinned-note persistence through edit/autosave, migration-failure messaging and stale clear-all undo state.
+- Version metadata updated to 2.1.0 on both platforms. SQLite schema remains version 2.
 
 ---
 
@@ -104,15 +113,11 @@ Device-level backup behaviour may depend on your operating system and settings.
 
 ---
 
-## Upgrading from V1
+## Upgrading
 
 Daymark V2 preserves V1 data. On first launch after upgrading, it creates a timestamped backup in an app-private backups folder before changing the database schema.
 
-The migration adds fields and indexes with safe defaults. Existing tasks, notes, settings and dates are kept. No V1 table is dropped or rebuilt.
-
-Both editions verify the backup before migration starts. If the backup cannot be created or verified, the upgrade stops before any schema change and shows a clear message. A previously verified backup is reused on retry; existing backups are not deleted.
-
-The Android safety path was implemented and checked on disposable database copies, but physical-device and emulator runtime testing were not performed for this release.
+The migration adds fields and indexes with safe defaults. Existing tasks, notes, settings and dates are kept. No V1 table is dropped or rebuilt. If a backup cannot be created or verified, the upgrade stops before any schema change and shows a clear message. A previously verified backup is reused on retry; existing backups are not deleted.
 
 ---
 
@@ -120,11 +125,9 @@ The Android safety path was implemented and checked on disposable database copie
 
 | | Windows | Android |
 |---|---|---|
-| **Availability** | Available | Available |
-| **Version** | 2.0.0 | 2.0.0 |
+| **Version** | 2.1.0 | 2.1.0 |
 | **Minimum** | Windows 10 / 11 (x64) | Android 7.0 (API 24) |
-| **Installation** | Run the self-contained executable | Install the signed APK |
-| **Storage** | Space for the application and local database | Space for the APK and local database |
+| **Installation** | Installer or portable ZIP | Install the signed APK |
 | **Connection** | Not required | Not required |
 
 ---
@@ -133,12 +136,13 @@ The Android safety path was implemented and checked on disposable database copie
 
 We believe in being clear about what has and has not been verified.
 
-- **Windows:** the release executable was launched and smoke-tested, including navigation, quick add, notes, settings and the month/week calendar switch.
-- **Migration:** 16/16 offline checks passed on a copied V1 database and a representative V1 fixture, including idempotency and data preservation.
-- **Backup safety:** 76/76 disposable-copy checks passed for backup failure, verification failure, migration failure, repeat launch and existing V2 installations.
-- **Android:** the release build, signature, certificate identity, alignment, package metadata and zero-permission manifest were verified.
-- **Android runtime:** physical-device and emulator runtime testing were **not performed** because neither was available. Android behaviour is build-verified and logic-tested, but not runtime-verified in this release.
-- **Windows signing:** the executable is unsigned, so a SmartScreen warning may appear.
+- **Builds:** Windows self-contained publish, Inno Setup installer, portable ZIP and signed Android APK all built successfully.
+- **Windows data safety:** 16/16 disposable-database checks passed, including fresh install, V1 migration, row preservation, verified backup, repeat launch and aborted migration with unchanged source bytes.
+- **Windows packaging:** silent install, reinstall, shortcut/registration creation, uninstall and cleanup checks passed under a non-admin account. Real user data was hash-verified unchanged.
+- **Windows application launch:** **NOT TESTED** in the build environment because no disposable Windows user profile was available.
+- **Android:** release build, signature, certificate identity, alignment, package metadata, version metadata, zero permissions and disposable SQL/logic checks passed.
+- **Android device/emulator runtime:** **NOT TESTED** — no device or emulator was available.
+- **Windows signing:** Windows executables are unsigned, so Windows SmartScreen may show a warning. Verify the published checksum before running.
 
 ---
 
@@ -147,14 +151,16 @@ We believe in being clear about what has and has not been verified.
 | | |
 |---|---|
 | **Product** | Daymark |
-| **Version** | 2.0.0 |
+| **Version** | 2.1.0 |
 | **Publisher** | Recklessplyer |
 | **Edition** | Offline |
 | **License** | MIT — see `LICENSE`. |
 
 ## Links
 
+- [Build and packaging guide](docs/BUILD_AND_PACKAGING.md)
 - [All releases](https://github.com/recklessrashdan/Daymark/releases)
+- [V2.1.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v2.1.0)
 - [V2.0.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v2.0.0)
 - [V1.0.0 release](https://github.com/recklessrashdan/Daymark/releases/tag/v1.0.0)
 

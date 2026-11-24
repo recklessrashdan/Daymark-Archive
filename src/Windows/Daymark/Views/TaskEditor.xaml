@@ -1,0 +1,55 @@
+<Window x:Class="Daymark.Views.TaskEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Task" Width="500" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" Background="{DynamicResource Bg}"
+        ShowInTaskbar="False">
+    <Border Padding="28" Background="{DynamicResource Surface}">
+        <StackPanel>
+            <TextBlock Text="Task details" Style="{StaticResource H2}" Margin="0,0,0,4"/>
+            <TextBlock Text="Keep it clear and actionable." Style="{StaticResource Muted}" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Title" Style="{StaticResource H3}" Margin="0,0,0,8"/>
+            <TextBox x:Name="TitleBox" Style="{StaticResource Input}" Height="42"
+                     AutomationProperties.Name="Task title" KeyDown="TitleBox_KeyDown"/>
+
+            <TextBlock Text="Description (optional)" Style="{StaticResource H3}" Margin="0,18,0,8"/>
+            <TextBox x:Name="DescriptionBox" Style="{StaticResource Input}" Height="84"
+                     AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                     AutomationProperties.Name="Task description"/>
+
+            <TextBlock Text="Category / label (optional)" Style="{StaticResource H3}" Margin="0,16,0,8"/>
+            <ComboBox x:Name="CategoryBox" Height="40" IsEditable="True" AutomationProperties.Name="Task category"/>
+
+            <Grid Margin="0,18,0,0">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="16"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Priority" Style="{StaticResource H3}" Margin="0,0,0,8"/>
+                    <ComboBox x:Name="PriorityBox" Height="40" SelectedIndex="1"
+                              AutomationProperties.Name="Priority">
+                        <ComboBoxItem Content="Low"/>
+                        <ComboBoxItem Content="Medium"/>
+                        <ComboBoxItem Content="High"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Due date" Style="{StaticResource H3}" Margin="0,0,0,8"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                        <CheckBox x:Name="HasDue" VerticalAlignment="Center" Margin="0,0,10,0" AutomationProperties.Name="Enable due date"/>
+                        <DatePicker x:Name="DueBox" Grid.Column="1" Height="40" IsEnabled="False"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <CheckBox x:Name="PinBox" Content="Pin to priority focus" Margin="0,18,0,0" AutomationProperties.Name="Pin task"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,24,0,0">
+                <Button Content="Cancel" Style="{StaticResource SecondaryButton}" Width="92" Margin="0,0,10,0"
+                        Click="Cancel_Click" IsCancel="True"/>
+                <Button Content="Save task" Style="{StaticResource PrimaryButton}" Width="116"
+                        Click="Save_Click" IsDefault="True"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

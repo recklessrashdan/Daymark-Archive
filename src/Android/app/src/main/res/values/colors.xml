@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Daymark V2 identity -->
+    <color name="navy">#151C2C</color>
+    <color name="navy_deep">#0F1522</color>
+    <color name="porcelain">#F4F6F8</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="slate">#586778</color>
+    <color name="border">#DDE4EB</color>
+    <color name="teal">#19B8A5</color>
+    <color name="teal_hover">#12A08F</color>
+    <color name="teal_dark">#0B7E72</color>
+    <color name="teal_soft">#DFF4F0</color>
+    <color name="amber">#F2B65D</color>
+    <color name="amber_soft">#FDF1DD</color>
+    <color name="amber_dark">#8A5A12</color>
+
+    <!-- Semantic / priority colors -->
+    <color name="high">#D1556B</color>
+    <color name="medium">#B87A1E</color>
+    <color name="low">#0B7E72</color>
+    <color name="danger">#C4445B</color>
+
+    <!-- Legacy aliases kept so every screen resolves to the new identity -->
+    <color name="violet">#19B8A5</color>
+    <color name="violet_hover">#12A08F</color>
+    <color name="lavender">#DFF4F0</color>
+    <color name="offwhite">#F4F6F8</color>
+    <color name="charcoal">#151C2C</color>
+    <color name="grey">#586778</color>
+
+    <!-- Dark palette -->
+    <color name="dark_bg">#0F1522</color>
+    <color name="dark_surface">#151C2C</color>
+    <color name="dark_alt">#1E2939</color>
+    <color name="dark_text">#F4F6F8</color>
+    <color name="dark_muted">#A6B3C2</color>
+    <color name="dark_border">#2B384B</color>
+    <color name="dark_primary_soft">#163E3A</color>
+</resources>

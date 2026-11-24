@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/day_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="Daymark logo"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_card"
+            android:padding="2dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daymark"
+                android:textColor="?attr/day_text"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Daily Life, Organised."
+                android:textColor="?attr/day_muted"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.1.0"
+            android:textColor="?attr/day_primary_dark"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/undo_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/bg_undo"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+        <TextView
+            android:id="@+id/undo_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task deleted"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+        <Button
+            android:id="@+id/undo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:background="@android:color/transparent"
+            android:text="UNDO"
+            android:textColor="#5CE0CD"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/day_surface"
+        android:elevation="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+        <Button android:id="@+id/nav_today" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp" android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground" android:text="◉\nToday"
+            android:textAllCaps="false" android:textSize="10sp" />
+        <Button android:id="@+id/nav_tasks" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp" android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground" android:text="☰\nTasks"
+            android:textAllCaps="false" android:textSize="10sp" />
+        <Button android:id="@+id/nav_calendar" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp" android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground" android:text="▦\nCalendar"
+            android:textAllCaps="false" android:textSize="10sp" />
+        <Button android:id="@+id/nav_notes" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp" android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground" android:text="✎\nNotes"
+            android:textAllCaps="false" android:textSize="10sp" />
+        <Button android:id="@+id/nav_settings" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp" android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground" android:text="⚙\nSettings"
+            android:textAllCaps="false" android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DaymarkTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/porcelain</item>
+        <item name="android:colorAccent">@color/teal_dark</item>
+        <item name="android:textColorPrimary">@color/navy</item>
+        <item name="android:textColorSecondary">@color/slate</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="day_bg">@color/porcelain</item>
+        <item name="day_surface">@color/surface</item>
+        <item name="day_alt">@color/teal_soft</item>
+        <item name="day_text">@color/navy</item>
+        <item name="day_muted">@color/slate</item>
+        <item name="day_border">@color/border</item>
+        <item name="day_primary">@color/teal</item>
+        <item name="day_primary_dark">@color/teal_dark</item>
+        <item name="day_primary_soft">@color/teal_soft</item>
+        <item name="day_amber">@color/amber_dark</item>
+    </style>
+
+    <style name="DaymarkTheme.Dark" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="android:colorAccent">@color/teal</item>
+        <item name="android:textColorPrimary">@color/dark_text</item>
+        <item name="android:textColorSecondary">@color/dark_muted</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="day_bg">@color/dark_bg</item>
+        <item name="day_surface">@color/dark_surface</item>
+        <item name="day_alt">@color/dark_alt</item>
+        <item name="day_text">@color/dark_text</item>
+        <item name="day_muted">@color/dark_muted</item>
+        <item name="day_border">@color/dark_border</item>
+        <item name="day_primary">@color/teal</item>
+        <item name="day_primary_dark">@color/teal</item>
+        <item name="day_primary_soft">@color/dark_primary_soft</item>
+        <item name="day_amber">@color/amber</item>
+    </style>
+
+    <style name="DaymarkTheme.Splash" parent="DaymarkTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

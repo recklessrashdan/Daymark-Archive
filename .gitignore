@@ -1,0 +1,41 @@
+# Build outputs
+**/bin/
+**/obj/
+**/build/
+**/.gradle/
+**/generated_assets/
+*.pdb
+
+# Local configuration and secrets
+local.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.password
+
+# Private data
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+backups/
+
+# Release binaries and packages
+*.exe
+*.msi
+*.apk
+*.zip
+Releases/
+GitHub_Release_Package_*/
+
+# Logs and editor files
+*.log
+*.tmp
+*.user
+*.suo
+.vs/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+    android:background="@drawable/bg_card" android:gravity="center_vertical" android:padding="12dp"
+    android:layout_marginBottom="8dp">
+    <View android:id="@+id/task_priority_bar" android:layout_width="3dp" android:layout_height="34dp"
+        android:layout_marginEnd="10dp" android:background="@color/medium" />
+    <CheckBox android:id="@+id/task_check" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp" android:buttonTint="@color/teal" />
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView android:id="@+id/task_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="?attr/day_text" android:textSize="14sp" android:textStyle="bold" android:maxLines="2" />
+        <TextView android:id="@+id/task_meta" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:textColor="?attr/day_muted" android:textSize="11sp" android:maxLines="1" />
+    </LinearLayout>
+    <Button android:id="@+id/task_edit" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:minHeight="0dp" android:minWidth="0dp" android:background="@android:color/transparent"
+        android:text="Edit" android:textAllCaps="false" android:textColor="@color/teal_dark" android:textSize="11sp" />
+    <Button android:id="@+id/task_delete" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:minHeight="0dp" android:minWidth="0dp" android:background="@android:color/transparent"
+        android:text="Del" android:textAllCaps="false" android:textColor="@color/danger" android:textSize="11sp" />
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:background="?attr/day_surface" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task details"
+            android:textColor="?attr/day_text" android:textSize="19sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp"
+            android:text="Keep it clear and actionable." android:textColor="?attr/day_muted" android:textSize="12sp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp"
+            android:text="Title" android:textColor="?attr/day_text" android:textSize="13sp" android:textStyle="bold" />
+        <EditText android:id="@+id/edit_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:hint="Task title" android:padding="11dp"
+            android:textColor="?attr/day_text" android:textColorHint="?attr/day_muted" android:textSize="13sp"
+            android:importantForAutofill="no" android:inputType="text" android:maxLines="1" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:text="Description (optional)" android:textColor="?attr/day_text" android:textSize="13sp" android:textStyle="bold" />
+        <EditText android:id="@+id/edit_desc" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="80dp" android:background="@drawable/bg_input" android:hint="Add a short description"
+            android:padding="11dp" android:gravity="top" android:textColor="?attr/day_text"
+            android:textColorHint="?attr/day_muted" android:textSize="13sp" android:importantForAutofill="no"
+            android:inputType="textMultiLine" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:text="Category / label (optional)" android:textColor="?attr/day_text" android:textSize="13sp" android:textStyle="bold" />
+        <EditText android:id="@+id/edit_category" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:hint="Work, Personal, Errands..."
+            android:padding="11dp" android:textColor="?attr/day_text" android:textColorHint="?attr/day_muted"
+            android:textSize="13sp" android:importantForAutofill="no" android:inputType="text" android:maxLines="1" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:text="Priority" android:textColor="?attr/day_text" android:textSize="13sp" android:textStyle="bold" />
+        <Spinner android:id="@+id/edit_priority" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:entries="@array/priorities" />
+
+        <CheckBox android:id="@+id/edit_has_due" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="Set due date" android:textColor="?attr/day_text" android:textSize="13sp"
+            android:buttonTint="@color/teal" />
+        <DatePicker android:id="@+id/edit_due" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:enabled="false" android:datePickerMode="spinner" android:calendarViewShown="false" />
+
+        <CheckBox android:id="@+id/edit_pin" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="Pin to priority focus" android:textColor="?attr/day_text"
+            android:textSize="13sp" android:buttonTint="@color/teal" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="18dp" android:gravity="end">
+            <Button android:id="@+id/edit_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_secondary_button" android:text="Cancel" android:textAllCaps="false"
+                android:textColor="?attr/day_text" android:textSize="12sp" />
+            <Button android:id="@+id/edit_save" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:background="@drawable/bg_primary_button" android:text="Save task"
+                android:textAllCaps="false" android:textColor="@android:color/white" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

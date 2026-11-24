@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:id="@+id/today_date" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="?attr/day_primary_dark" android:textSize="11sp" android:textStyle="bold" />
+                <TextView android:id="@+id/today_greeting" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" android:textColor="?attr/day_text" android:textSize="28sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:text="A clear plan makes a calm day." android:textColor="?attr/day_muted" android:textSize="12sp" />
+            </LinearLayout>
+            <Button android:id="@+id/today_new" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_primary_button" android:minHeight="0dp"
+                android:text="+ New" android:textAllCaps="false" android:textColor="@android:color/white"
+                android:textSize="12sp" android:textStyle="bold" android:paddingStart="14dp" android:paddingEnd="14dp" />
+        </LinearLayout>
+
+        <!-- Daily overview + productivity rhythm -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:background="@drawable/bg_card" android:orientation="vertical"
+            android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/today_percent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0%" android:textColor="?attr/day_text" android:textSize="28sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Today's progress" android:textColor="?attr/day_text" android:textSize="15sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/today_progress" style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="8dp"
+                        android:max="100" />
+                    <TextView android:id="@+id/today_stats" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" android:textColor="?attr/day_muted" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp"
+                android:background="?attr/day_border" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="14dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="WEEKLY RHYTHM" android:textColor="?attr/day_primary_dark"
+                    android:textSize="10sp" android:textStyle="bold" />
+                <TextView android:id="@+id/today_weekly_done" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0 done" android:textColor="?attr/day_muted" android:textSize="10sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/today_week_bars" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Completion streak" android:textColor="?attr/day_muted" android:textSize="11sp" />
+                <TextView android:id="@+id/today_streak" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textColor="@color/amber_dark" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Insight tiles -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp">
+            <Button android:id="@+id/today_overdue" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:minHeight="0dp" android:background="@drawable/bg_secondary_button"
+                android:padding="10dp" android:text="OVERDUE\n0" android:textAllCaps="false"
+                android:textColor="@color/danger" android:textSize="12sp" />
+            <Button android:id="@+id/today_upcoming" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="8dp" android:minHeight="0dp"
+                android:background="@drawable/bg_secondary_button" android:padding="10dp"
+                android:text="NEXT 7 DAYS\n0" android:textAllCaps="false" android:textColor="@color/amber_dark" android:textSize="12sp" />
+            <Button android:id="@+id/today_high" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="8dp" android:minHeight="0dp"
+                android:background="@drawable/bg_secondary_button" android:padding="10dp"
+                android:text="PRIORITY\n0" android:textAllCaps="false" android:textColor="?attr/day_primary_dark" android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp"
+            android:layout_marginBottom="9dp" android:text="Today's tasks" android:textColor="?attr/day_text"
+            android:textSize="17sp" android:textStyle="bold" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="8dp">
+            <EditText android:id="@+id/today_quick" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:background="@null" android:hint="Add a task for today..."
+                android:textColor="?attr/day_text" android:textColorHint="?attr/day_muted" android:textSize="13sp"
+                android:importantForAutofill="no" android:inputType="text" android:maxLines="1" />
+            <Button android:id="@+id/today_add" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:minHeight="0dp" android:background="@drawable/bg_primary_button" android:text="Add"
+                android:textAllCaps="false" android:textColor="@android:color/white" android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/today_task_list" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginTop="10dp" />
+        <TextView android:id="@+id/today_empty" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="Nothing planned yet. Add your first task above."
+            android:textColor="?attr/day_muted" android:textSize="12sp" android:visibility="gone" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp"
+            android:layout_marginBottom="9dp" android:text="Priority focus" android:textColor="?attr/day_text"
+            android:textSize="17sp" android:textStyle="bold" />
+        <LinearLayout android:id="@+id/today_priority_list" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <TextView android:id="@+id/today_priority_empty" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="No high-priority tasks. Enjoy the calm." android:textColor="?attr/day_muted"
+            android:textSize="12sp" android:visibility="gone" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp"
+            android:layout_marginBottom="9dp" android:text="Daily notes" android:textColor="?attr/day_text"
+            android:textSize="17sp" android:textStyle="bold" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/today_note_date" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="?attr/day_primary_dark" android:textSize="11sp" android:textStyle="bold" />
+            <TextView android:id="@+id/today_note" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="9dp" android:maxLines="4" android:text="Your thoughts for today will appear here."
+                android:textColor="?attr/day_text" android:textSize="13sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+                <Button android:id="@+id/today_open_notes" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp" android:minHeight="0dp" android:background="@android:color/transparent"
+                    android:text="Open notes →" android:textAllCaps="false" android:textColor="?attr/day_primary_dark" android:textSize="12sp" />
+                <Button android:id="@+id/today_open_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" android:minHeight="0dp" android:background="@android:color/transparent"
+                    android:text="Calendar →" android:textAllCaps="false" android:textColor="?attr/day_primary_dark" android:textSize="12sp" />
+                <Button android:id="@+id/today_open_tasks" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" android:minHeight="0dp" android:background="@android:color/transparent"
+                    android:text="All tasks →" android:textAllCaps="false" android:textColor="?attr/day_primary_dark" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
